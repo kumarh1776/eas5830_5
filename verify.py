@@ -9,7 +9,7 @@ def signChallenge( challenge ):
     #This is the only line you need to modify
     sk = "0x495dcd5c30f204d649c6f3a5fd66225001122ddca3f5a578fa9dd4f31cccce1c"
 
-unt.from_key(sk)
+    acct = w3.eth.account.from_key(sk)
 
     signed_message = w3.eth.account.sign_message( challenge, private_key = acct._private_key )
 
